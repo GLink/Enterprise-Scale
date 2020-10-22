@@ -37,6 +37,19 @@
                 "subnetID": 0
               },
               "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+              "name": "Sub2",
+              "id": "/subscriptions/1ba94d69-7d95-434d-9c1a-4d2cb4d22ecc/resourceGroups/rg-esglitest/providers/Microsoft.Network/virtualNetworks/vnet-estest/subnets/Sub2",
+              "properties": {
+                "provisioningState": "Succeeded",
+                "addressPrefix": "10.1.1.0/24",
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Enabled",
+                "privateLinkServiceNetworkPolicies": "Enabled",
+                "subnetID": 0
+              },
+              "type": "Microsoft.Network/virtualNetworks/subnets"
             }
           ],
           "virtualNetworkPeerings": [],
