@@ -26,6 +26,31 @@
         "properties": {
           "policyDefinitions": [
             {
+              "Name": "enforce-resource-2naming",
+              "ResourceId": "/providers/Microsoft.Management/managementGroups/esgli-test/providers/Microsoft.Authorization/policyDefinitions/enforce-resource-2naming",
+              "ResourceName": "enforce-resource-2naming",
+              "ResourceType": "Microsoft.Authorization/policyDefinitions",
+              "SubscriptionId": null,
+              "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/esgli-test/providers/Microsoft.Authorization/policyDefinitions/enforce-resource-2naming",
+              "Properties": {
+                "Description": "Policy to enforce gaute naming convention pattern.",
+                "DisplayName": "enforce-resource-2naming",
+                "Mode": "Indexed",
+                "Parameters": null,
+                "PolicyRule": {
+                  "if": {
+                    "not": {
+                      "field": "name",
+                      "like": "dill*"
+                    }
+                  },
+                  "then": {
+                    "effect": "deny"
+                  }
+                }
+              }
+            },
+            {
               "Name": "enforce-resource-naming",
               "ResourceId": "/providers/Microsoft.Management/managementGroups/esgli-test/providers/Microsoft.Authorization/policyDefinitions/enforce-resource-naming",
               "ResourceName": "enforce-resource-naming",
