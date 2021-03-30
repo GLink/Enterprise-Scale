@@ -50,7 +50,8 @@ jobs:
     timeout-minutes: 120
     if: github.head_ref != 'system' && github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'push'
     name: Push
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    #runs-on: ubuntu-latest
     steps:
       - name: Actions checkout
         uses: actions/checkout@v2
