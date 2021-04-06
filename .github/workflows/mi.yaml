@@ -44,10 +44,13 @@ jobs:
         uses: actions/checkout@v2
       - name: GitHub context
         run: echo "$GITHUB_CONTEXT"
-      - name: Login via Az module
-        uses: azure/login@v1
-        with:
-          creds: ${{secrets.AZURE_CREDENTIALS}}
+      #- name: Login via Az module
+      #  uses: azure/login@v1
+      #  with:
+      #    creds: ${{secrets.AZURE_CREDENTIALS}}
+      - name: Login via MI
+        run: |
+          az login --identity
       - name: Run Az CLI script
         run: |
           az webapp list --query "[?state=='Running']"
